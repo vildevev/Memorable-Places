@@ -41,6 +41,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="dHs-0F-shF" id="P2l-yJ-6FF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wss-cN-e3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,16 +8,18 @@
 
 import UIKit
 
+var places = [Dictionary<String, String>()]
+
 class PlacesViewController: UITableViewController {
 
+    @IBOutlet var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if places.count == 1 && places[0].count == 0 {
+            places.remove(at: 0)
+            places.append(["name": "Taj Mahal", "lat": "27.75277", "lon": "78.042128"])
+        }
+        table.reloadData() 
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,20 +36,23 @@ class PlacesViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return places.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "Row \(indexPath.row)"
+        if places[indexPath.row]["name"] != nil {
+            
+        }
+        cell.textLabel?.text = places[indexPath.row]["name"]
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toMap", sender: nil) 
+        performSegue(withIdentifier: "toMap", sender: nil)
     }
     /*
     // Override to support conditional editing of the table view.
