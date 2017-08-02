@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YoJ-8R-qPs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gPt-Hb-DWi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Places-->
         <scene sceneID="x8m-Qd-fgJ">
             <objects>
-                <tableViewController id="gPt-Hb-DWi" sceneMemberID="viewController">
+                <tableViewController id="gPt-Hb-DWi" customClass="PlacesViewController" customModule="Memorable_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dHs-0F-shF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,10 +33,10 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="IhD-94-dF0">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="564-eO-fqQ">
+                    <navigationItem key="navigationItem" title="Places" id="IhD-94-dF0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="564-eO-fqQ">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="78w-4Y-u6u"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="toMap" id="78w-4Y-u6u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="-1636" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Map -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Memorable_Places" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map " id="BYZ-38-t0r" customClass="ViewController" customModule="Memorable_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
